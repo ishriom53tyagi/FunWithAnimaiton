@@ -1,0 +1,64 @@
+<!doctype html>
+
+
+<head>
+<title>This is working for the move element</title>
+<style>
+body
+{
+padding:0px;
+background-color: #E2E2E2;
+}
+.thing
+{
+border-radius: 50%;
+height:120px;
+width:120px;
+background-color:rgb(255,207,0);
+transform:translate3d(50px,50px,0px);
+transition: transform .3s cubic-bezier(0,.54,.98,.56);
+
+}
+.container
+{
+
+width:550px;
+height:450px;
+background-color: #F2F2F2;
+overflow:hidden;
+cursor:pointer;
+}
+
+
+
+
+
+</style>
+	</head>
+
+
+<body>
+
+<div class="container">
+	<div class="thing">
+	</div>
+</div>
+  
+<script>  
+var thecontainer=document.querySelector(".container");
+var thething =document.querySelector(".thing");
+
+thecontainer.addEventListener("click",clickpos,false);
+
+function clickpos(e)
+{
+ var xposition=e.clientX-(thething.offsetWidth/2);
+ var yposition=e.clientY-(thething.offsetHeight/2);
+
+ var translate3dvalue="translate3d("+ xposition +"px,"+yposition+"px,0)";
+ thething.style.transform=translate3dvalue;
+}
+
+
+</script>
+</body>
