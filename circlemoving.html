@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+	<head>
+		<!--<meta charset="utf-8"> -->
+		<title>Animation </title>
+		<!--<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="main.js"></script>-->
+<style>
+		.circle
+		{
+			width:200px;
+			height:200px;
+			background-color:#0099FF;
+			border-radius: 50%;
+			animation: slide 4s infinite;
+			
+		}
+		body
+		{
+			background-color: #fff;
+			padding:50px;
+		}
+	.circleA
+        {
+  
+    transition-timing-function: linear;
+     }
+  .circleB
+  {
+  	
+  	transition-timing-function: steps(4,start);
+  }
+
+		.container {
+        width: 550px;
+        background-color: #FFF;
+        border: 3px #CCC dashed;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0 auto;
+    }
+		@keyframes slide
+		{
+
+        0%
+        {
+        	transform: translate3d(0px,0px,0px);
+
+
+		}
+		
+     	50%
+     	{
+     		transform: translate3d(450px,0px,0px);
+     		opacity: 1;
+     	}
+     	100%
+     	{
+     		transform: translate3d(0px,0px,0px);
+     	}
+
+        }
+       
+ 
+
+</style>
+
+	</head>
+
+<body>
+	<div id="conatiner">
+	<div id="circleA"  class="circle"> </div>
+	<div id="circleB" class="circle"> </div>
+</div>
+	<script src="http://www.kirupa.com/js/prefixfree.min.js"></script>
+</body>
+</html>
