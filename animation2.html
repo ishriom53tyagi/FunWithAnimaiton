@@ -1,0 +1,60 @@
+<!Doctype html>
+
+<head>
+<style type="text/css">
+body
+{
+
+	margin-top: 10px;
+	margin:30px;
+	background-color: #fff;
+}
+#contentcontainer
+{
+background-color: black;
+height: 350px;
+width: 550px;
+overflow:hidden;
+border:5px black solid;
+}
+
+#thing
+{
+	left:50px;
+	position: relative;
+	top:25px;
+}
+</style>
+	</head>
+
+
+<body>
+	<div id="contentcontainer">
+<img id="thing" src="C:\Users\tyagi\Downloads\beautiful-blur-bright-326055.jpg" height="300" width="300">
+	</div>
+
+<script>
+var ele=document.querySelector("#thing");
+var requestAnimationFrame=window.requestAnimationFrame||
+						  window.mozRequestAniamtionFrame||
+						  window.webkitRequestAnimationFrame||
+						  window.msRequestAnimationFrame;
+var currentpos=0;
+
+function movething()
+{
+
+currentpos+=5;
+
+ele.style.left=currentpos+"px";
+if(Math.abs(currentpos)>=900)
+{
+	currentpos=-500;
+}
+requestAnimationFrame(movething);
+}
+movething();
+</script>
+
+
+</body>
